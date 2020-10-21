@@ -1,7 +1,7 @@
 const initialState = {
-        name: "",
-        status: "",
-        image: "",
+        quote: '',
+        // status: "",
+        // image: "",
         loading: false,
    
 }
@@ -14,7 +14,7 @@ export const AppReducer = (state = initialState, action) => {
             };
         case "FETCHING_SUCCESS":
             return {
-                ...state, name: state.name, status: state.status, image: state.image, loading: true
+                ...state, quote: action.payload, loading: false
             };
         case "FETCHING_ERROR":
             return {

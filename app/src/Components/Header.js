@@ -4,7 +4,7 @@ const Header = () => {
     return (
         <div>
             <h2>
-                RICKY AND MORTY
+                DAILY QUOTE
             </h2>
         </div>
     )

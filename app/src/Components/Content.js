@@ -10,19 +10,20 @@ const Content = (props) => {
 
     return (
         <div>
-         
-            <h2> {props.name} </h2>
-            {/* <p> {props.status}</p> */}
-            <button onClick = {props.getData}> Next Character </button>
+            <h2>{props.quote}</h2>
+            {/* {props.charactor.map(element => (
+                <h2>{element.name}</h2>
+            ))}  */}
+             <button onClick={props.getData}> Quote </button>
+            
+            
         </div>
     );
 };
 
 const mapStateToprops = (state) => {
     return {
-        name: state.name,
-        status: state.status,
-        image: state.image,
+        quote: state.quote,
         loading: state.loading,
     };
 };
