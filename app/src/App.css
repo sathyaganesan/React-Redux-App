@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: #282c34;
 }
 
 .App-logo {
@@ -35,4 +36,24 @@
   to {
     transform: rotate(360deg);
   }
+}
+button {
+  background-color: #61dafb;
+  width: 100px;
+  height: 30px;
+  font-size: large;
+  color: blue;
+  border: none;
+  border-radius: 7px;
+  margin: 20px; 
+}
+
+.app-title {
+  color: aquamarine;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.quote {
+  color: beige;
+  font-family: cursive;
 }

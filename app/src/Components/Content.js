@@ -10,7 +10,7 @@ const Content = (props) => {
 
     return (
         <div>
-            <h2>{props.quote}</h2>
+            <p className = "quote">{props.quote}</p>
             {/* {props.charactor.map(element => (
                 <h2>{element.name}</h2>
             ))}  */}
