@@ -1,13 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { createStore, applyMiddleware } from 'redux';
+import  thunk from 'redux-thunk';
+import {Provider } from 'react-redux';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+import { AppReducer } from './Reducers/AppReducer';
+
+const logger = ({ getState }) => (next) => (action) => {
+  console.log("Dispatching action: ", action);
+  next(action);
+};
+
+const store = createStore(AppReducer, applyMiddleware(logger, thunk))
+
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store = {store}>
     <App />
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById('root')
 );
 
